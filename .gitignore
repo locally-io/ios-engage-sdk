@@ -1,0 +1,23 @@
+
+## Intellij
+.idea
+
+## Cocoapods
+Pods
+
+
+*.xcodeproj/project.xcworkspace/**
+
+## User settings
+*.xcodeproj/xcuserdata/**
+*.xcodeproj/xcshareddata/**
+project.pbxproj.orig
+
+
+## Workspace
+*.xcworkspace/**
+
+## Fastlane
+fastlane/README.md
+fastlane/report.xml
+fastlane/test_output/report.html

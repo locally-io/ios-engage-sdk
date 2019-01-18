@@ -1,0 +1,60 @@
+disabled_rules:
+  - switch_case_alignment
+  - trailing_whitespace
+  - vertical_parameter_alignment
+
+excluded:
+  - Pods
+  - Example
+
+function_body_length:
+  - 50 # warning
+  - 100 # error
+
+line_length: 150
+
+opt_in_rules:
+  - force_unwrapping
+  - control_statement
+  - convenience_type
+  - discouraged_optional_boolean
+  - closure_end_indentation
+  - collection_alignment
+  - modifier_order
+  - empty_count
+  - empty_string
+  - fatal_error_message
+  - file_name
+  - first_where
+  - for_where
+  - let_var_whitespace
+  - implicitly_unwrapped_optional
+  - implicit_return
+  - identical_operands
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - protocol_property_accessors_order
+  - redundant_type_annotation
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - unavailable_function
+  - trailing_closure
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - unused_private_declaration
+  - yoda_condition
+
+
+identifier_name:
+ excluded:
+ - iv
+ - x
+ - y
+ - to
+ - id
+ - os
+ - OS

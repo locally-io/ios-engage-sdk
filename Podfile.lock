@@ -1,0 +1,61 @@
+PODS:
+  - Alamofire (4.8.0)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - AWSCore (2.8.1)
+  - AWSSNS (2.8.1):
+    - AWSCore (= 2.8.1)
+  - KontaktSDK (2.0.1)
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
+  - OHHTTPStubs/Swift (6.1.0):
+    - OHHTTPStubs/Default
+  - PromiseKit (6.5.3):
+    - PromiseKit/CorePromise (= 6.5.3)
+    - PromiseKit/Foundation (= 6.5.3)
+    - PromiseKit/UIKit (= 6.5.3)
+  - PromiseKit/CorePromise (6.5.3)
+  - PromiseKit/Foundation (6.5.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.5.3):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire (= 4.8.0)
+  - AlamofireImage (= 3.4.1)
+  - AWSSNS (= 2.8.1)
+  - KontaktSDK (= 2.0.1)
+  - OHHTTPStubs/Swift (= 6.1.0)
+  - PromiseKit (= 6.5.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AWSCore
+    - AWSSNS
+    - KontaktSDK
+    - OHHTTPStubs
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  AWSCore: f17db38a5f8bceb217a19d58d8755bbb6f5ddb3c
+  AWSSNS: 9e709acb7d65701df5dee25355ab1566b8bbcc0d
+  KontaktSDK: 7dc507f20c8821d13132c6ec09089972e9b8bf5b
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
+
+PODFILE CHECKSUM: 9721984d2d3434a886eb7140b7c1279bf5291af6
+
+COCOAPODS: 1.5.3
