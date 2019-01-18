@@ -60,7 +60,7 @@ On your App capabilities check :
 3.  Act as Bluetooth LE accessory
 4. Remote notifications
   
-![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/capabilities.png)
+![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/capabilities.png)
 ￼￼￼
 You are ready to go!
 
@@ -136,7 +136,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
   
 ####  Creating a Notification Service Extension
 To add push notifications campaigns to your app, you have to add a NotificationServiceExtension to your project.
-![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/service_extension.png)
+![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/service_extension.png)
 
 
 ####  Configuring your Notification Service
@@ -161,12 +161,12 @@ class NotificationService: UNNotificationServiceExtension {
   
 ####  Creating a Notification Content Extension
 To add push notifications campaigns to your app, you have to add a NotificationContentExtension to your project.
-![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/content_extension.png)
+![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_extension.png)
   
 
 ###  Configuring your plist file
 Now open the plist file, remove the NSExtensionMainStoryboard key and set the other keys like the picture just below.
-![](https://raw.githubusercontent.com/locally-io/EngageSDK/master/Screenshots/content_keys.png)
+![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_keys.png)
 
 ####  Configuring the Notification View Controller
 
