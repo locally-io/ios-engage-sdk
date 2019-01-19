@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.swift_version = "4.2"
 
   s.ios.deployment_target = '11.2'
-  s.source                = { :git => "https://github.com/digital2go/EngageSDK.git", :tag => s.version }
+  s.source                = { :git => "https://github.com/locally-io/ios-engage-sdk.git", :tag => s.version }
   s.source_files          = "Source/**/*.swift"
   s.resources             = "Source/**/*.xib"
 
