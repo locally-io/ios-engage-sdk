@@ -8,32 +8,34 @@
 
 import UIKit
 
-protocol WidgetContent {}
+public protocol WidgetContent {}
 
-protocol Widget {
-	var content: WidgetContent? { get set }
+public protocol Widget {
+    var content: WidgetContent? { get set }
+    var id: Int? { get set }
+    var didDismiss: (() -> Void)? { get set }
 }
 
-typealias WidgetViewController = UIViewController & Widget
+public typealias WidgetViewController = UIViewController & Widget
 
 protocol WidgetFactory {
-	static func widget(fromContent content: CampaignContent) -> WidgetViewController?
+    static func widget(fromContent content: CampaignContent) -> WidgetViewController?
 }
 
 class WidgetsAbstractFactory {
-
-	private init() {}
-
-	static func widget(forCampaignContent content: CampaignContent) -> WidgetViewController? {
-
-		switch content.layout {
-
-			case .MISC:
-				return MiscellaneousFactory.widget(fromContent: content)
-			case .COUPONS:
-				return nil
-			case .SURVEY:
-				return nil
-		}
-	}
+    
+    private init() {}
+    
+    static func widget(forCampaignContent content: CampaignContent) -> WidgetViewController? {
+        
+        switch content.layout {
+            
+        case .MISC:
+            return MiscellaneousFactory.widget(fromContent: content)
+        case .COUPONS:
+            return nil
+        case .SURVEY:
+            return nil
+        }
+    }
 }

@@ -11,13 +11,34 @@ import Foundation
 struct Campaign: Decodable {
     
     struct Data: Decodable {
-        let id: Int
+        let id: Int?
         let campaignContentTouchId: Int?
         let campaignContentNearId: Int?
         let campaignContentFarId: Int?
-        let campaignContent: CampaignContent
-        let mediaCdn: String
-        let impressionId: Int
+        let campaignContent: CampaignContent?
+        let mediaCdn: String?
+        let impressionId: Int?
+    }
+    
+    let data: Data?
+}
+
+struct GeofencesCampaign: Decodable {
+    
+    struct Content: Decodable {
+        
+        let id: Int?
+        let campaignContentTouchId: Int?
+        let campaignContentNearId: Int?
+        let campaignContentFarId: Int?
+        let campaignContent: CampaignContent?
+        let mediaCdn: String?
+    }
+    
+    struct Data: Decodable {
+        
+        let impressionId: Int?
+        let campaigns: [Content]?
     }
     
     let data: Data?

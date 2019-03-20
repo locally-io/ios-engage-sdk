@@ -1,4 +1,3 @@
-//
 //  MiscellaneousFactory.swift
 //  EngageSDK
 //
@@ -9,27 +8,29 @@
 import Foundation
 
 class MiscellaneousFactory: WidgetFactory {
-
-	private static let xibFactory = "Miscellaneous"
-
-	private enum MiscellaneousLayout: String {
-		case fullScreenImage = "b_full_screen_image"
-		case fullScreenVideo
-		case videoWithImage
-	}
-
-	static func widget(fromContent content: CampaignContent) -> WidgetViewController? {
-
-		switch content.subLayout {
-
-			case MiscellaneousLayout.fullScreenImage.rawValue:
-
-				let miscellaneous: MiscellaneousImageViewController = MiscellaneousImageViewController.fromNib(nibName: xibFactory)
-				miscellaneous.content = content.miscellaneousFullScreenContent
-				return miscellaneous
-
-			default:
-				return nil
-		}
-	}
+    
+    private static let xibFactory = "Miscellaneous"
+    
+    private enum MiscellaneousLayout: String {
+        case fullScreenImage = "b_full_screen_image"
+        case fullScreenVideo
+        case videoWithImage
+    }
+    
+    static func widget(fromContent content: CampaignContent) -> WidgetViewController? {
+        
+        switch content.subLayout {
+            
+        case MiscellaneousLayout.fullScreenImage.rawValue:
+            
+            // swiftlint:disable:next redundant_type_annotation
+            let miscellaneous: MiscellaneousImageViewController = MiscellaneousImageViewController.fromNib(nibName: xibFactory)
+            miscellaneous.id = content.id
+            miscellaneous.content = content.miscellaneousFullScreenContent
+            return miscellaneous
+            
+        default:
+            return nil
+        }
+    }
 }
