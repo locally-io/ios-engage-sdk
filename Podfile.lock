@@ -2,6 +2,14 @@ PODS:
   - Alamofire (4.8.0)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
+  - AppCenter (1.14.0):
+    - AppCenter/Analytics (= 1.14.0)
+    - AppCenter/Crashes (= 1.14.0)
+  - AppCenter/Analytics (1.14.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.14.0)
+  - AppCenter/Crashes (1.14.0):
+    - AppCenter/Core
   - AWSCore (2.8.1)
   - AWSSNS (2.8.1):
     - AWSCore (= 2.8.1)
@@ -32,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.8.0)
   - AlamofireImage (= 3.4.1)
+  - AppCenter
   - AWSSNS (= 2.8.1)
   - KontaktSDK (= 2.0.1)
   - OHHTTPStubs/Swift (= 6.1.0)
@@ -41,6 +50,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - AppCenter
     - AWSCore
     - AWSSNS
     - KontaktSDK
@@ -50,12 +60,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
   AWSCore: f17db38a5f8bceb217a19d58d8755bbb6f5ddb3c
   AWSSNS: 9e709acb7d65701df5dee25355ab1566b8bbcc0d
   KontaktSDK: 7dc507f20c8821d13132c6ec09089972e9b8bf5b
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
 
-PODFILE CHECKSUM: 9721984d2d3434a886eb7140b7c1279bf5291af6
+PODFILE CHECKSUM: 1e139cf4c8b9079c11a7188640c0a8b1f45f93d9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

@@ -11,6 +11,7 @@ target 'EngageSDK' do
 	pod 'PromiseKit', '6.5.3'
 	pod 'KontaktSDK', '2.0.1'
 	pod 'AWSSNS', '2.8.1'
+	pod 'AppCenter'
 
 	target 'EngageSDKTests' do
 		inherit! :search_paths

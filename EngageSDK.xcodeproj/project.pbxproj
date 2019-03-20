@@ -24,6 +24,8 @@
 		C902BFB22193C04900CC63F6 /* BeaconScannerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9134E8C218A2980009F0EBF /* BeaconScannerError.swift */; };
 		C9134E8D218A2980009F0EBF /* BeaconScannerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9134E8C218A2980009F0EBF /* BeaconScannerError.swift */; };
 		C9397E8121AE3779006568FE /* GeofencesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE921AE0D4A00A1752B /* GeofencesServices.swift */; };
+		C9698D8C2242C06F00F6C6D7 /* ConsoleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698D8B2242C06F00F6C6D7 /* ConsoleContent.swift */; };
+		C9698D8E2242C07B00F6C6D7 /* ConsoleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698D8D2242C07B00F6C6D7 /* ConsoleDelegate.swift */; };
 		C99DADE321ADDD3700A1752B /* GeofencesMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE221ADDD3700A1752B /* GeofencesMonitor.swift */; };
 		C99DADE521ADDD9F00A1752B /* GeofencesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE421ADDD9F00A1752B /* GeofencesRequest.swift */; };
 		C99DADE621ADFDCD00A1752B /* GeofencesMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE221ADDD3700A1752B /* GeofencesMonitor.swift */; };
@@ -200,6 +202,8 @@
 		8D1FF2EFEBD4FF5FBF84C23B /* Pods-EngageSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngageSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EngageSDK/Pods-EngageSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		B16912297784D627C92B139A /* Pods-EngageSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngageSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EngageSDKTests/Pods-EngageSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9134E8C218A2980009F0EBF /* BeaconScannerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerError.swift; sourceTree = "<group>"; };
+		C9698D8B2242C06F00F6C6D7 /* ConsoleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleContent.swift; sourceTree = "<group>"; };
+		C9698D8D2242C07B00F6C6D7 /* ConsoleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDelegate.swift; sourceTree = "<group>"; };
 		C99DADE221ADDD3700A1752B /* GeofencesMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesMonitor.swift; sourceTree = "<group>"; };
 		C99DADE421ADDD9F00A1752B /* GeofencesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesRequest.swift; sourceTree = "<group>"; };
 		C99DADE921AE0D4A00A1752B /* GeofencesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesServices.swift; sourceTree = "<group>"; };
@@ -352,6 +356,15 @@
 			path = BeaconScanner;
 			sourceTree = "<group>";
 		};
+		C9698D8A2242C05700F6C6D7 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				C9698D8B2242C06F00F6C6D7 /* ConsoleContent.swift */,
+				C9698D8D2242C07B00F6C6D7 /* ConsoleDelegate.swift */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
 		C99DADE121ADDD0800A1752B /* Geofences */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +468,7 @@
 		F833990D216DC72D003E9E7F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C9698D8A2242C05700F6C6D7 /* Console */,
 				F8AE6EB421C51DFE00E23A93 /* Protocols */,
 				C99DADE121ADDD0800A1752B /* Geofences */,
 				F84E700E21AD88620085D7AF /* Campaigns */,
@@ -862,30 +876,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EngageSDKTests/Pods-EngageSDKTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EngageSDKTests/Pods-EngageSDKTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSSNS/AWSSNS.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${PODS_ROOT}/KontaktSDK/Cocoapods/iOS/KontaktSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSNS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EngageSDKTests/Pods-EngageSDKTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EngageSDKTests/Pods-EngageSDKTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9304D230083FCC0F1DAD31F6 /* [CP] Check Pods Manifest.lock */ = {
@@ -941,8 +943,10 @@
 				F81A1C1E2173596D005CF1D8 /* TokenManager.swift in Sources */,
 				F84E701221AF1A560085D7AF /* Gender.swift in Sources */,
 				F856A9932192E217002DBF02 /* MiscellaneousImageViewController.swift in Sources */,
+				C9698D8E2242C07B00F6C6D7 /* ConsoleDelegate.swift in Sources */,
 				2DCDD0E2217CDB770080699F /* Location.swift in Sources */,
 				F846C3BE2199113F00FDC172 /* CampaignRequest.swift in Sources */,
+				C9698D8C2242C06F00F6C6D7 /* ConsoleContent.swift in Sources */,
 				F846C3BC219909A400FDC172 /* WindowExtension.swift in Sources */,
 				F833991F216DF6A5003E9E7F /* AuthenticationServices.swift in Sources */,
 				F8E76AC721B4FE4800310A53 /* BeaconProximity.swift in Sources */,
