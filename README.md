@@ -160,15 +160,7 @@ class NotificationService: UNNotificationServiceExtension {
 	}
 }
 
-```
-
-
-### Displaying Push Notifications Content  
-  
-####  Creating a Notification Content Extension
-To add Push Notifications campaigns to your app, you'll have to add a NotificationContentExtension to your project:
-![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_extension.png)
-  
+``` 
 
 ###  Configuring your plist file
 Now open the plist file, remove the NSExtensionMainStoryboard key and then set the other keys as illustrated in the image below.
