@@ -17,14 +17,14 @@ You can  install Cocoapods using the following terminal command
 $ sudo gem install cocoapods
 ```
 
-To initialize Cocoapods on your project, navigate through the terminal to your project directory and run the following command:
+To initialize Cocoapods on your project, navigate through the terminal to your project directory and then run the following command:
 ```ruby
 $ cocoapods init
 ```
 
 This will create a `.podfile` on the root of your project. The `.podfile` is the configuration file that Cocoapods uses to declare the project dependencies. 
 
-Add the EngageSDK as a dependency to your project:
+Next, add the EngageSDK as a dependency to your project:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -36,7 +36,7 @@ pod 'EngageSDK'
 end
 ```
 
-On the root of your project where the `.podfile` was created run the following command to install the Discovery SDK as a dependency:
+On the root of your project where the `.podfile` was created, run the following command to install the Discovery SDK as a dependency:
 
 ```ruby
 $ pod install
@@ -52,7 +52,7 @@ Engage SDK will need location and bluetooth permissions. Add the following keys 
 - NSLocationWhenInUseUsageDescription
 
 ### Capabilities
-  ￼  
+
 On your App capabilities check:  
 
 1. Location Updates
@@ -62,7 +62,8 @@ On your App capabilities check:
   
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/capabilities.png)
 ￼￼￼
-With all of the above setup, now you're ready to Engage up and running!
+With all of the above setup, now you're now ready to get Engage up and running!
+
 
 ## Initializing The Framework  
 
@@ -90,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Monitoring Beacons Campaigns
 
-After the SDK has been initialized, you can call Engage.startMonitoringBeacons from any place in your app. The initialized closure is used to guarantee that startMonitoringBeacons is )_only_ called after the SDK has been initialized.
+After the SDK has been initialized, you can call Engage.startMonitoringBeacons from any place in your app. The initialized closure is used to guarantee that startMonitoringBeacons is called _only_ after the SDK has been initialized.
 
 ```swift
 Engage.initialized = {
@@ -101,7 +102,7 @@ Engage.initialized = {
 
 ## Monitoring Geofences Campaigns
 
-You can monitor Geofences Campaigns in the same way you do monitor Beacons. Just call Engage.startMonitoringGeofences.
+You can monitor Geofences Campaigns in the same way you monitor Beacons. Just call Engage.startMonitoringGeofences:
 
 ```swift
 Engage.initialized = {
@@ -115,7 +116,7 @@ Engage.initialized = {
 }
 ```
 
-You can also monitor Beacons and Geofences at the same time:
+You can also monitor Beacons _and_ Geofences at the same time:
 
 ```swift
 Engage.initialized = { Engage.startMonitoringBeacons()
@@ -138,7 +139,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 ### Displaying Push Notification Preview  
   
 ####  Creating a Notification Service Extension
-To add push notifications campaigns to your app, you'll have to add a NotificationServiceExtension to your project:
+To add Push Notifications campaigns to your app, you'll have to add a NotificationServiceExtension to your project:
 
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/service_extension.png)
 
@@ -165,7 +166,7 @@ class NotificationService: UNNotificationServiceExtension {
 ### Displaying Push Notifications Content  
   
 ####  Creating a Notification Content Extension
-To add push notifications campaigns to your app, you'll have to add a NotificationContentExtension to your project:
+To add Push Notifications campaigns to your app, you'll have to add a NotificationContentExtension to your project:
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_extension.png)
   
 
