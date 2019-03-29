@@ -9,22 +9,22 @@
 ## Installation
 
 ### CocoaPods
-Cocoapods is a dependency management platform to install, update and delete the libraries used on the project.  
+Cocoapods is a dependency management platform used to install, update and delete the libraries used on a project.  
 
-You can  install Cocoapods with the following terminal command
+You can  install Cocoapods using the following terminal command
 
 ```ruby
 $ sudo gem install cocoapods
 ```
 
-To initialize Cocoapods on your project, navigate through the terminal to your project directory and run this command:
+To initialize Cocoapods on your project, navigate through the terminal to your project directory and run the following command:
 ```ruby
 $ cocoapods init
 ```
 
-This will create a `.podfile` on the root of your project. The `.podfile` is the configuration file that Cocoapods use to declare the project dependencies. 
+This will create a `.podfile` on the root of your project. The `.podfile` is the configuration file that Cocoapods uses to declare the project dependencies. 
 
-Add the EngageSDK as a dependency to your project.
+Add the EngageSDK as a dependency to your project:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -36,7 +36,7 @@ pod 'EngageSDK'
 end
 ```
 
-On the root of your project where the `.podfile` was created run the following command to install the Discovery SDK as a dependency.
+On the root of your project where the `.podfile` was created run the following command to install the Discovery SDK as a dependency:
 
 ```ruby
 $ pod install
@@ -45,7 +45,7 @@ $ pod install
 
 ### Permissions
 
-Engage SDK will need location and bluetooth permissions. Add the following keys to  your App plist.  
+Engage SDK will need location and bluetooth permissions. Add the following keys to your App plist:  
 
 - NSBluetoothPeripheralUsageDescription
 - NSLocationAlwaysAndWhenInUseUsageDescription
@@ -53,20 +53,20 @@ Engage SDK will need location and bluetooth permissions. Add the following keys 
 
 ### Capabilities
   ￼  
-On your App capabilities check :  
+On your App capabilities check:  
 
 1. Location Updates
 2. Uses Bluetooth LE accessory
-3.  Act as Bluetooth LE accessory
+3. Act as Bluetooth LE accessory
 4. Remote notifications
   
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/capabilities.png)
 ￼￼￼
-You are ready to go!
+With all of the above setup, now you're ready to Engage up and running!
 
 ## Initializing The Framework  
 
-To initialize engage add your credentials to the initialize call on the didFinishLaunchingWithOptions of your AppDelegate.
+To initialize Engage, add your credentials to the Initialize Call on the didFinishLaunchingWithOptions of your AppDelegate.
 
 ```swift
 import LocallyEngageSDK
@@ -90,7 +90,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Monitoring Beacons Campaigns
 
-After the SDK has been initialized you can call Engage.startMonitoringBeacons in any place of you app. The initialized closure is used to guarantee startMonitoringBeacons is only called after the SDK has been initialized.
+After the SDK has been initialized, you can call Engage.startMonitoringBeacons from any place in your app. The initialized closure is used to guarantee that startMonitoringBeacons is )_only_ called after the SDK has been initialized.
+
 ```swift
 Engage.initialized = {
 	Engage.startMonitoringBeacons()
@@ -100,7 +101,8 @@ Engage.initialized = {
 
 ## Monitoring Geofences Campaigns
 
-You can monitor geofences campaigns on the same way you do with beacons. Just call Engage.startMonitoringGeofences.
+You can monitor Geofences Campaigns in the same way you do monitor Beacons. Just call Engage.startMonitoringGeofences.
+
 ```swift
 Engage.initialized = {
 	Engage.startMonitoringGeofences()
@@ -113,7 +115,8 @@ Engage.initialized = {
 }
 ```
 
-Monitoring Beacons and Geofences at the same time
+You can also monitor Beacons and Geofences at the same time:
+
 ```swift
 Engage.initialized = { Engage.startMonitoringBeacons()
 	Engage.startMonitoringGeofences()
@@ -124,7 +127,7 @@ Engage.initialized = { Engage.startMonitoringBeacons()
 ## Push Notifications Campaigns
 
 ### Registering for Push Notifications  
-Implement the delegate method "didRegisterForRemoteNotificationsWithDeviceToken" on your AppDelegate and set the device token
+To register for Push Notifications, implement the delegate method "didRegisterForRemoteNotificationsWithDeviceToken" on your AppDelegate and then set the device token:
 
 ```swift
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -135,13 +138,15 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 ### Displaying Push Notification Preview  
   
 ####  Creating a Notification Service Extension
-To add push notifications campaigns to your app, you have to add a NotificationServiceExtension to your project.
+To add push notifications campaigns to your app, you'll have to add a NotificationServiceExtension to your project:
+
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/service_extension.png)
 
 
 ####  Configuring your Notification Service
 
-Change your NotificationService to call RemoteNotificationPreviewDisplayer like this.
+Change your NotificationService to call RemoteNotificationPreviewDisplayer by adding the following:
+
 ```swift
 import LocallyEngageSDK
 import UserNotifications
@@ -160,17 +165,18 @@ class NotificationService: UNNotificationServiceExtension {
 ### Displaying Push Notifications Content  
   
 ####  Creating a Notification Content Extension
-To add push notifications campaigns to your app, you have to add a NotificationContentExtension to your project.
+To add push notifications campaigns to your app, you'll have to add a NotificationContentExtension to your project:
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/target.png) ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_extension.png)
   
 
 ###  Configuring your plist file
-Now open the plist file, remove the NSExtensionMainStoryboard key and set the other keys like the picture just below.
+Now open the plist file, remove the NSExtensionMainStoryboard key and then set the other keys as illustrated in the image below.
 ![](https://raw.githubusercontent.com/locally-io/ios-engage-sdk/master/Screenshots/content_keys.png)
 
 ####  Configuring the Notification View Controller
 
-Remove your MainInterface.storyboard file and change your NotificationViewController to call RemoteNotificationViewController on your viewDidLoad method.
+Remove your MainInterface.storyboard file and then change your NotificationViewController to call RemoteNotificationViewController on your viewDidLoad method:
+
 ```swift
 import LocallyEngageSDK
 
