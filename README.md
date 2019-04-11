@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
 
-## Monitoring Beacons Campaigns
+## Monitoring Beacon Campaigns
 
 After the SDK has been initialized, you can call Engage.startMonitoringBeacons from any place in your app. The initialized closure is used to guarantee that startMonitoringBeacons is called _only_ after the SDK has been initialized.
 
