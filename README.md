@@ -100,9 +100,9 @@ Engage.initialized = {
 ```
   
 
-## Monitoring Geofences Campaigns
+## Monitoring Geofence Campaigns
 
-You can monitor Geofences Campaigns in the same way you monitor Beacons. Just call Engage.startMonitoringGeofences:
+You can monitor Geofence Campaigns in the same way you monitor Beacons. Just call Engage.startMonitoringGeofences:
 
 ```swift
 Engage.initialized = {
