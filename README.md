@@ -125,7 +125,7 @@ Engage.initialized = { Engage.startMonitoringBeacons()
 ```
 
 
-## Push Notifications Campaigns
+## Push Notification Campaigns
 
 ### Registering for Push Notifications  
 To register for Push Notifications, implement the delegate method "didRegisterForRemoteNotificationsWithDeviceToken" on your AppDelegate and then set the device token:
