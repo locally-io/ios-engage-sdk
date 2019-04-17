@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "LocallyEngageSDK"
-  s.version       = "0.3"
+  s.version       = "0.4"
   s.summary       = "Engage SDK"
   s.homepage      = "http://locally.io"
   s.license       = "MIT"
