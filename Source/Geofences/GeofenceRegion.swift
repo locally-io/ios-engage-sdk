@@ -18,10 +18,16 @@ public enum Coverage: String, Decodable {
 }
 
 public struct Region: Decodable {
-    let campaignId: Int?
+    
+    public struct Point: Decodable {
+        let lat: Double?
+        let lng: Double?
+    }
+    
+    let geofenceId: Int?
     let coverageType: Coverage?
     let center: Circle?
-    let points: [[Double]]?
+    let points: [Point]?
 }
 
 public struct GeofenceRegion: Decodable {

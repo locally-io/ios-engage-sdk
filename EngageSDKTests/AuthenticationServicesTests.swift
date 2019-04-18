@@ -95,7 +95,8 @@ class AuthenticationServicesTests: XCTestCase {
 
 		_ = AuthenticationServices.login(username: "", password: "", deviceId: "").done { result in
 
-			XCTAssert(result.data.aws.sns == "test_sns")
+            guard let aws = result.data.aws else { return }
+			XCTAssert(aws.sns == "test_sns")
 			expectation.fulfill()
 
 		}.catch { error in

@@ -12,7 +12,7 @@ import PromiseKit
 import UIKit
 
 class GeofencesMonitor {
-    
+
     var contents = [CampaignContent]()
     var contentsNotification = [CampaignContent]()
     var timer: Timer?
@@ -30,10 +30,10 @@ class GeofencesMonitor {
     func initMonitoring() {
         LocationManager.startMonitoring(delegate: self)
     }
-    
-    func stopMonitoring() {
-        LocationManager.stopMonitoring()
-    }
+
+	func stopMonitoring() {
+		LocationManager.stopMonitoring()
+	}
     
     func clearCache() {
         contents = [CampaignContent]()
@@ -42,14 +42,14 @@ class GeofencesMonitor {
 }
 
 extension GeofencesMonitor: LocationManagerDelegate {
-    
-    func didChangeLocation(location: CLLocation) {
-        
+
+	func didChangeLocation(location: CLLocation) {
+		
         guard sendRequest else {return }
         
         sendRequest = false
-        let geofencesRequest = GeofencesRequest(isBluetoothEnabled: Utils.isBluetoothEnabled, location: Location(location: location))
-        ConsolePresenter.shared.sendMessage(content: ConsoleContent(message: .geofenceRequest, location: location))
+		let geofencesRequest = GeofencesRequest(isBluetoothEnabled: Utils.isBluetoothEnabled, location: Location(location: location))
+		ConsolePresenter.shared.sendMessage(content: ConsoleContent(message: .geofenceRequest, location: location))
         _ = GeofencesServices.getGeofences(geofencesRequest: geofencesRequest).done { result in
             
             guard let data = result.data, let campaigns = data.campaigns else { return }
@@ -77,9 +77,9 @@ extension GeofencesMonitor: LocationManagerDelegate {
                 NotificationManager.shared.sendNotification(withContent: content)
             }
         }.catch { error in
-                Log.print(title: "GeofencesServices - Error", message: error.localizedDescription)
+            Log.print(title: "GeofencesServices - Error", message: error.localizedDescription)
         }
-    }
+	}
     
     func showContent(campaign: CampaignContent, isActive: Bool) -> Bool {
         

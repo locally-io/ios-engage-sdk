@@ -2,13 +2,13 @@ PODS:
   - Alamofire (4.8.0)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
-  - AppCenter (1.14.0):
-    - AppCenter/Analytics (= 1.14.0)
-    - AppCenter/Crashes (= 1.14.0)
-  - AppCenter/Analytics (1.14.0):
+  - AppCenter (1.13.2):
+    - AppCenter/Analytics (= 1.13.2)
+    - AppCenter/Crashes (= 1.13.2)
+  - AppCenter/Analytics (1.13.2):
     - AppCenter/Core
-  - AppCenter/Core (1.14.0)
-  - AppCenter/Crashes (1.14.0):
+  - AppCenter/Core (1.13.2)
+  - AppCenter/Crashes (1.13.2):
     - AppCenter/Core
   - AWSCore (2.8.1)
   - AWSSNS (2.8.1):
@@ -60,7 +60,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
-  AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
+  AppCenter: bce7fe1098e8e8aeb70aaae1898600534069f549
   AWSCore: f17db38a5f8bceb217a19d58d8755bbb6f5ddb3c
   AWSSNS: 9e709acb7d65701df5dee25355ab1566b8bbcc0d
   KontaktSDK: 7dc507f20c8821d13132c6ec09089972e9b8bf5b

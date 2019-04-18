@@ -6,6 +6,7 @@
 //  Copyright © 2018 Locally. All rights reserved.
 //
 
+import CoreLocation
 import Foundation
 import PromiseKit
 
@@ -13,35 +14,34 @@ import PromiseKit
 public let Engage = EngageSDK.shared
 
 public class EngageSDK {
-    
-    static let shared = EngageSDK()
-    
-    // MARK: - Public Properties
-    public var deviceToken: Data? {
-        didSet {
-            NotificationManager.shared.deviceToken = deviceToken
-        }
-    }
-    
-    public var initialized: (() -> Void)? {
-        didSet {
-            guard AuthenticationManager.isAuthenticated else { return }
-            
+
+	static let shared = EngageSDK()
+
+	// MARK: - Public Properties
+	public var deviceToken: Data? {
+		didSet {
+			NotificationManager.shared.deviceToken = deviceToken
+		}
+	}
+
+	public var initialized: (() -> Void)? {
+		didSet {
+			guard AuthenticationManager.isAuthenticated else { return }
             geofencesMonitor.clearCache()
-            initialized?()
-        }
-    }
-    
-    // MARK: - Private Properties
-    private var beaconsMonitor: BeaconsMonitor
+			initialized?()
+		}
+	}
+
+	// MARK: - Private Properties
+	private var beaconsMonitor: BeaconsMonitor
     private var geofencesMonitor: GeofencesMonitor
     private var geofencesRegionMonitor: GeofencesRegionMonitor
-    
-    public var presenterDelegate: WidgetsPresenterDelegate? {
-        didSet {
-            WidgetsPresenter.shared.delegate = presenterDelegate
-        }
-    }
+
+	public var presenterDelegate: WidgetsPresenterDelegate? {
+		didSet {
+			WidgetsPresenter.shared.delegate = presenterDelegate
+		}
+	}
     
     public weak var consoleDelegate: ConsoleDelegate? {
         didSet {
@@ -49,19 +49,31 @@ public class EngageSDK {
         }
     }
     
-    // MARK: - Initialization
-    private init() {
-        beaconsMonitor   = BeaconsMonitor(listener: CampaignsCoordinator())
-        geofencesMonitor = GeofencesMonitor()
+	// MARK: - Initialization
+	private init() {
+		beaconsMonitor = BeaconsMonitor(listener: CampaignsCoordinator())
+		geofencesMonitor = GeofencesMonitor()
         geofencesRegionMonitor = GeofencesRegionMonitor()
-        NotificationCenter.observe(event: .enterOnBackground, observer: self, selector: #selector(appMovedToBackground))
-    }
-    
-    // MARK: - Public Operations
+		NotificationCenter.observe(event: .enterOnBackground, observer: self, selector: #selector(appMovedToBackground))
+	}
+
+	// MARK: - Public Operations
     public func initialize(username: String, password: String) -> Promise<Bool> {
         let isLogged = AuthenticationManager.login(username: username, password: password)
         self.initialized?()
         return isLogged
+    }
+    
+    public var isAuthorizedAlwaysLocation: Bool {
+        return LocationManager.checkAlwaysPermissions()
+    }
+    
+    public var monitoringStatus: CLAuthorizationStatus {
+        return LocationManager.checkStatusPermission()
+    }
+    
+    public var isAuthorizedAlwaysOrNotDeterminedLoc: Bool {
+        return LocationManager.checkAlwaysOrNotDeterminedPermissions()
     }
     
     public func isValidToken() -> Bool {
@@ -74,36 +86,36 @@ public class EngageSDK {
         beaconsMonitor.stopMonitoring()
         TokenManager.invalidateToken()
     }
-    
-    public func startMonitoringBeacons(cache: Bool = false) {
-        beaconsMonitor.startMonitoring(cache: cache)
-    }
+
+	public func startMonitoringBeacons(cache: Bool = false) -> Promise<Void> {
+		return beaconsMonitor.startMonitoring(cache: cache)
+	}
     
     public func stopMonitoringBeacons() {
         beaconsMonitor.stopMonitoring()
     }
-    
-    public func startMonitoringGeofences() {
+
+	public func startMonitoringGeofences() -> Promise<Void> {
         LocationManager.setRegionDelegate(delegate: self)
-        geofencesRegionMonitor.startMonitoring()
-    }
-    
-    public func stopMonitoringGeofences() {
+        return geofencesRegionMonitor.startMonitoring()
+	}
+
+	public func stopMonitoringGeofences() {
         geofencesMonitor.stopMonitoring()
         geofencesMonitor = GeofencesMonitor()
-    }
-    
-    public func getHomeScreens(callback: @escaping ([Screen]) -> Void ) {
-        guard let guid = ConfigurationKeys.guid else { return }
-        _ = HomeServices.getScreens(guid: guid).done { response in
-            callback(response.data)
-        }
-    }
-    
-    @objc
-    func appMovedToBackground() {
-        //startMonitoringBeacons()
-    }
+	}
+
+	public func getHomeScreens(callback: @escaping ([Screen]) -> Void ) {
+		guard let guid = ConfigurationKeys.guid else { return }
+		_ = HomeServices.getScreens(guid: guid).done { response in
+			callback(response.data)
+		}
+	}
+	
+	@objc
+	func appMovedToBackground() {
+		//startMonitoringBeacons()
+	}
 }
 
 extension EngageSDK: GeofencesRegionMonitorDelegate {

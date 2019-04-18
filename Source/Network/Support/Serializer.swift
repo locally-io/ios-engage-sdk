@@ -47,7 +47,7 @@ class Serializer {
 	func toObject<Object>(_ type: Object.Type, fromData data: Data) throws -> Object where Object: Decodable {
 
 		do {
-			return try decoder.decode(type, from: data)
+            return try decoder.decode(type, from: data)
 		} catch let error {
 
 			guard let decodingError = error as? DecodingError else {

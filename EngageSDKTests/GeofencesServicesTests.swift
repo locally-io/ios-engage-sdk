@@ -16,10 +16,10 @@ class GeofencesServicesTests: XCTestCase {
         
         let expectation = self.expectation(description: "Show geofence")
         
-        let location = Location(longitude: -118.316509, latitude: 33.8806, altitude: 238.3782, horizontal: 8, speed: -1, vertical: 3)
+        let location = Location(longitude: -109.938047, latitude: 27.498933, altitude: 238.3782, horizontal: 8, speed: -1, vertical: 3)
 		let request = GeofencesRequest(isBluetoothEnabled: true, location: location)
         
-		_ = GeofencesServices.getGeofences(geofencesRequest: request)
+        _ = GeofencesServices.getGeofences(geofencesRequest: request)
             .done { _ in
                 
                 expectation.fulfill()

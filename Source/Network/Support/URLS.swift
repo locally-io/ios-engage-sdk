@@ -9,5 +9,5 @@
 import Foundation
 
 enum URLS {
-    static let base = "https://api.locally.io"
+	static let base = "https://api.locally.io"
 }

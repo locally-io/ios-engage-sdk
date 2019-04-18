@@ -11,9 +11,11 @@ import UIKit
 public protocol WidgetContent {}
 
 public protocol Widget {
-    var content: WidgetContent? { get set }
+	var content: WidgetContent? { get set }
     var id: Int? { get set }
-    var didDismiss: (() -> Void)? { get set }
+	var didDismiss: (() -> Void)? { get set }
+    
+    func present() -> Bool
 }
 
 public typealias WidgetViewController = UIViewController & Widget
@@ -23,19 +25,25 @@ protocol WidgetFactory {
 }
 
 class WidgetsAbstractFactory {
-    
-    private init() {}
-    
-    static func widget(forCampaignContent content: CampaignContent) -> WidgetViewController? {
+
+	private init() {}
+
+	static func widget(forCampaignContent content: CampaignContent) -> WidgetViewController? {
+        guard let layout = content.layout else { return nil }
         
-        switch content.layout {
-            
-        case .MISC:
+        switch layout {
+        case "MISC":
             return MiscellaneousFactory.widget(fromContent: content)
-        case .COUPONS:
+        case "COUPONS":
+            return CouponsFactory.widget(fromContent: content)
+        case "SURVEY":
             return nil
-        case .SURVEY:
+        case "PUSH_NOTIFICATION":
+            return nil
+        //case .RETAIL:
+        //    return nil
+        default:
             return nil
         }
-    }
+	}
 }

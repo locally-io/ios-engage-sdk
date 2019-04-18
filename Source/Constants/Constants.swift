@@ -9,8 +9,8 @@
 import Foundation
 
 enum Constants {
-    static let regionIdentifier = "locally.io"
-    static let UUID = "8d847d20-0116-435f-9a21-2fa79a706d9e"
-    static let OS = "ios"
-    static let MonitorInterval = TimeInterval(10)
+	static let regionIdentifier = "locally.io"
+	static let UUID = "8d847d20-0116-435f-9a21-2fa79a706d9e"
+	static let OS = "ios"
+	static let MonitorInterval = TimeInterval(10)
 }

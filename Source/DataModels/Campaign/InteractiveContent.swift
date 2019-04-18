@@ -18,16 +18,16 @@ enum Action: String, Codable {
 }
 
 class InteractiveContent: Codable {
-    
-    let id: Int
-    let campaignContentId: Int
-    let videoId: Int?
-    let action: Action
-    let data: String?
-    let color: String?
-    let label: String?
-    let created: Date
-    let modified: Date
+
+	let id: Int
+	let campaignContentId: Int
+	let videoId: Int?
+	let action: Action
+	let data: String?
+	let color: String?
+	let label: String?
+	let created: Date
+	let modified: Date
     var campaignId: Int?
     var impressionId: Int?
 }

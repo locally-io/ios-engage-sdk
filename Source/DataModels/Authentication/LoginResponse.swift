@@ -9,22 +9,22 @@
 import Foundation
 
 struct AWS: Decodable {
-    let sns: String?
-    let iosArn: String?
-    let identityPoolId: String?
+	let sns: String?
+	let iosArn: String?
+	let identityPoolId: String?
 }
 
 struct LoginResponse: Decodable {
-    
-    struct Data: Decodable {
-        let appGuid: String?
-        let refresh: String?
-        let token: String?
-        let kontaktApiKey: String?
-        let aws: AWS?
+
+	struct Data: Decodable {
+		let appGuid: String?
+		let refresh: String?
+		let token: String?
+		let kontaktApiKey: String?
+		let aws: AWS?
         let message: String?
-    }
-    
-    let data: Data
+	}
+
+	let data: Data
     let success: Bool
 }
