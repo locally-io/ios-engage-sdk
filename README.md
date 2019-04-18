@@ -123,7 +123,20 @@ Engage.initialized = { Engage.startMonitoringBeacons()
 	Engage.startMonitoringGeofences()
 }
 ```
+## Handling Content
 
+implementing WidgetsPresenterDelegate let you catch when a beacon or geofence campaign are detected
+widgets are xib filewith his own viewcontroller that let you present the campaigns content
+in a collectionview or whatever you decide
+```swift
+extension CampaignListViewController: WidgetsPresenterDelegate {
+    
+    func present(widget: WidgetViewController) {
+    	// do something with the widget
+        widgets.append(widget)
+    }
+}
+```
 
 ## Push Notification Campaigns
 
