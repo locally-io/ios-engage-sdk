@@ -125,9 +125,9 @@ Engage.initialized = { Engage.startMonitoringBeacons()
 ```
 ## Handling Content
 
-implementing WidgetsPresenterDelegate let you catch when a beacon or geofence campaign are detected
-widgets are xib filewith his own viewcontroller that let you present the campaigns content
-in a collectionview or whatever you decide
+Implementing WidgetsPresenterDelegate allows your app know when Beacon and/or Geofence campaigns are detected.
+This widget is an xib file with its own viewcontroller that lets you present campaign contents
+in a collection view (or similar alternative method of your choosing).
 ```swift
 extension CampaignListViewController: WidgetsPresenterDelegate {
     
