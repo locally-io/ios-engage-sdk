@@ -57,8 +57,8 @@ class LocationManager: NSObject {
     }
     
     private static func showAlert() {
-        let titleAlert = "Allow \"Locally Engage\" to access your location even when you are not using the app?"
-        let messageAlert = "Please enable always location permission in settings."
+        let titleAlert = "\"Locally Engage\" requires the use of Always Allow Location to monitor Beacons and Geofences"
+        let messageAlert = "Please Enable in Settings."
         let alertController = UIAlertController(title: titleAlert,
                                                 message: messageAlert, preferredStyle: UIAlertController.Style.alert)
         
