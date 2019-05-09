@@ -85,6 +85,7 @@ public class EngageSDK {
         geofencesMonitor = GeofencesMonitor()
         beaconsMonitor.stopMonitoring()
         TokenManager.invalidateToken()
+        UIApplication.shared.unregisterForRemoteNotifications()
     }
 
 	public func startMonitoringBeacons(cache: Bool = false) -> Promise<Void> {
