@@ -37,7 +37,7 @@ class PushNotificationsFactory: WidgetFactory {
         switch content.subLayout {
         case PushNotificationLayout.richPush.rawValue:
             
-            createRichPushNotification(fromContent: content))
+            createRichPushNotification(fromContent: content)
             return nil
         default:
             return nil
