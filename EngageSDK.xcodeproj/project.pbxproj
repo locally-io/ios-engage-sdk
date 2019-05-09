@@ -47,6 +47,7 @@
 		C99DADE621ADFDCD00A1752B /* GeofencesMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE221ADDD3700A1752B /* GeofencesMonitor.swift */; };
 		C99DADE721ADFDCD00A1752B /* GeofencesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE421ADDD9F00A1752B /* GeofencesRequest.swift */; };
 		C99DADEA21AE0D4A00A1752B /* GeofencesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE921AE0D4A00A1752B /* GeofencesServices.swift */; };
+		C9B158D82269069500F44699 /* PushNotificationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B158D72269069500F44699 /* PushNotificationsFactory.swift */; };
 		C9BC3BC321876D0700A658A4 /* BeaconsScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC3BC221876D0700A658A4 /* BeaconsScannerTests.swift */; };
 		C9C803202225BBC500E6A337 /* ConsoleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8031F2225BBC500E6A337 /* ConsoleDelegate.swift */; };
 		C9C803222225BBE300E6A337 /* ConsoleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C803212225BBE300E6A337 /* ConsoleContent.swift */; };
@@ -266,6 +267,7 @@
 		C99DADE221ADDD3700A1752B /* GeofencesMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesMonitor.swift; sourceTree = "<group>"; };
 		C99DADE421ADDD9F00A1752B /* GeofencesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesRequest.swift; sourceTree = "<group>"; };
 		C99DADE921AE0D4A00A1752B /* GeofencesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesServices.swift; sourceTree = "<group>"; };
+		C9B158D72269069500F44699 /* PushNotificationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsFactory.swift; sourceTree = "<group>"; };
 		C9BC3BC221876D0700A658A4 /* BeaconsScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconsScannerTests.swift; sourceTree = "<group>"; };
 		C9C8031F2225BBC500E6A337 /* ConsoleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDelegate.swift; sourceTree = "<group>"; };
 		C9C803212225BBE300E6A337 /* ConsoleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleContent.swift; sourceTree = "<group>"; };
@@ -482,6 +484,14 @@
 			path = Geofences;
 			sourceTree = "<group>";
 		};
+		C9B158D62269060D00F44699 /* PushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				C9B158D72269069500F44699 /* PushNotificationsFactory.swift */,
+			);
+			path = PushNotifications;
+			sourceTree = "<group>";
+		};
 		C9C8031E2225BBAB00E6A337 /* Console */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +552,7 @@
 		F80E560721906DD600DA6FEA /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				C9B158D62269060D00F44699 /* PushNotifications */,
 				C983B6E5225668C70097AD5B /* Coupons */,
 				F856A98F2192DD88002DBF02 /* Miscellaneous */,
 				F80E5608219070C600DA6FEA /* WidgetsAbstractFactory.swift */,
@@ -1069,6 +1080,7 @@
 				F8339922216DF969003E9E7F /* LoginResponse.swift in Sources */,
 				C983B6E822566B800097AD5B /* CouponsViewController.swift in Sources */,
 				C99DADE521ADDD9F00A1752B /* GeofencesRequest.swift in Sources */,
+				C9B158D82269069500F44699 /* PushNotificationsFactory.swift in Sources */,
 				F85C99EF217E996D00912F7D /* Constants.swift in Sources */,
 				F81A1C232173848D005CF1D8 /* RefreshTokenRequest.swift in Sources */,
 				F839157221A458E700368817 /* ColorPalette.swift in Sources */,

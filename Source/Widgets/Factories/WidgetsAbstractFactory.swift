@@ -39,7 +39,7 @@ class WidgetsAbstractFactory {
         case "SURVEY":
             return nil
         case "PUSH_NOTIFICATION":
-            return nil
+            return PushNotificationsFactory.widget(fromContent: content)
         //case .RETAIL:
         //    return nil
         default:

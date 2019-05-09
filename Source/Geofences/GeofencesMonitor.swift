@@ -73,8 +73,18 @@ extension GeofencesMonitor: LocationManagerDelegate {
                     return
                 }
                 
-                let content = NotificationContent(title: campaignContent.notificationMessage, data: dataContent)
-                NotificationManager.shared.sendNotification(withContent: content)
+                let title = campaignContent.notificationMessage
+                let content = NotificationContent(title: title, data: dataContent)
+                if UIApplication.shared.isAppOnForeground {
+                    NotificationManager.shared.sendNotification(withContent: content)
+                } else {
+                    if campaignContent.subLayout == "e_rich_push_notification" {
+                        PushNotificationsFactory.createRichPushNotification(fromContent: campaignContent)
+                    } else {
+                        NotificationManager.shared.sendNotification(withContent: content)
+                    }
+                    WidgetsPresenter.shared.presentWidget(withContent: campaignContent)
+                }
             }
         }.catch { error in
             Log.print(title: "GeofencesServices - Error", message: error.localizedDescription)

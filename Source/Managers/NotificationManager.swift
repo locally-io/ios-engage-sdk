@@ -65,6 +65,15 @@ class NotificationManager: NSObject {
 			self.createNotificationRequest(withContent: content)
 		}
 	}
+    
+    func sendNotificationInForeground(withContent content: NotificationContent) {
+        let ccontent = UNMutableNotificationContent()
+        ccontent.title = content.title
+        ccontent.userInfo = content.data
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: ccontent, trigger: nil)
+        self.notificationCenter.add(request, withCompletionHandler: nil)
+    }
 
 	// MARK: - Internal Operations
 
@@ -216,14 +225,17 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
 	func userNotificationCenter(_ center: UNUserNotificationCenter,
 	                            didReceive response: UNNotificationResponse,
 	                            withCompletionHandler completionHandler: @escaping () -> Void) {
-		completionHandler()
+		let userInfo = response.notification.request.content.userInfo
         
-        let userInfo = response.notification.request.content.userInfo
-        
-		if let campaignContent = CampaignContent.fromDictionary(dictionary: userInfo) {
+        if let link = userInfo["linkpush"] as? String {
+            guard let url = URL(string: link) else { return }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else if let campaignContent = CampaignContent.fromDictionary(dictionary: userInfo) {
 			WidgetsPresenter.shared.presentWidget(withContent: campaignContent)
 		} else {
 			handleRemoteNotification(notification: response.notification)
 		}
+        
+        completionHandler()
 	}
 }

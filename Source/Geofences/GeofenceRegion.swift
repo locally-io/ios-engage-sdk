@@ -11,6 +11,7 @@ public struct Circle: Decodable {
     let lat: Double
     let lng: Double
     let radius: Double
+    let radiusD: Double?
 }
 
 public enum Coverage: String, Decodable {
@@ -20,12 +21,14 @@ public enum Coverage: String, Decodable {
 public struct Region: Decodable {
     
     public struct Point: Decodable {
-        let lat: Double?
-        let lng: Double?
+        let lat: Double
+        let lng: Double
     }
     
     let geofenceId: Int?
+    let campaignId: Int?
     let coverageType: Coverage?
+    let wkt: String?
     let center: Circle?
     let points: [Point]?
 }

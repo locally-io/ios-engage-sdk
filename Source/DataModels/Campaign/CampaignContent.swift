@@ -16,6 +16,8 @@ public struct CampaignContent: Codable, DictionaryConvertible {
 
 	struct Attributes: Codable {
 		let message: String
+        let pushMessage: String?
+        let link: String?
 		let submit: String
 		let backgroundGradientTop: String
 		let backgroundGradientBottom: String
