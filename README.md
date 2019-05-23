@@ -1,5 +1,6 @@
 # EngageSDK
-[![Build Status](https://travis-ci.com/locally-io/ios-engage-sdk.svg?branch=master)](https://travis-ci.com/locally-io/ios-engage-sdk) ![GitHub](https://img.shields.io/github/license/locally-io/ios-engage-sdk.svg) [ ![Download](https://api.bintray.com/packages/locally/engage/core/images/download.svg?version=1.0.3) ](https://bintray.com/locally/engage/core/1.0.3/link)
+[![Build Status](https://travis-ci.com/locally-io/ios-engage-sdk.svg?branch=master)](https://travis-ci.com/locally-io/ios-engage-sdk) ![GitHub last commit](https://img.shields.io/github/last-commit/locally-io/ios-engage-sdk.svg) 
+![GitHub](https://img.shields.io/github/license/locally-io/ios-engage-sdk.svg)
 ## Requirements
 
 - iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+
