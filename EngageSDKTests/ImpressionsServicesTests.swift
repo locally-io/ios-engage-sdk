@@ -11,7 +11,7 @@ import OHHTTPStubs
 import XCTest
 
 class ImpressionsServicesTests: XCTestCase {
-
+/*
 	func testBeaconImpressionsSucceed() {
 
 		let expectation = self.expectation(description: "Show impressions")
@@ -66,5 +66,5 @@ class ImpressionsServicesTests: XCTestCase {
 			XCTFail(error.localizedDescription)
 		}
 		waitForExpectations(timeout: 3.0)
-	}
+	}*/
 }

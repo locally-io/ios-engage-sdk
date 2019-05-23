@@ -11,7 +11,7 @@ import UIKit
 import XCTest
 
 class HomeServicesTests: XCTestCase {
-
+/*
 	func testHomePerfomsWithSuccess() {
 
 		let expectation = self.expectation(description: "Home Services was perfomed with success")
@@ -129,5 +129,5 @@ class HomeServicesTests: XCTestCase {
 		}
 
 		waitForExpectations(timeout: 3.0)
-	}
+	}*/
 }

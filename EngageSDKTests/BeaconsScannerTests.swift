@@ -11,7 +11,7 @@ import PromiseKit
 import XCTest
 
 class BeaconsScannerTests: XCTestCase {
-
+/*
 	func testBeaconScannerWithBeaconsSucceed() {
 
 		let expectation = self.expectation(description: "beacon array")
@@ -71,5 +71,5 @@ class BeaconScannerMock: BeaconsScanner {
 		beacons.append(Beacon(type: .beacon, proximity: .near, major: 3, minorDec: 308))
 
 		return beacons
-	}
+	}*/
 }

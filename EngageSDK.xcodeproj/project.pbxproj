@@ -49,6 +49,18 @@
 		C99DADEA21AE0D4A00A1752B /* GeofencesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DADE921AE0D4A00A1752B /* GeofencesServices.swift */; };
 		C9B158D82269069500F44699 /* PushNotificationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B158D72269069500F44699 /* PushNotificationsFactory.swift */; };
 		C9BC3BC321876D0700A658A4 /* BeaconsScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC3BC221876D0700A658A4 /* BeaconsScannerTests.swift */; };
+		C9BFA815229718960030591E /* ConsoleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8031F2225BBC500E6A337 /* ConsoleDelegate.swift */; };
+		C9BFA816229718960030591E /* ConsoleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C803212225BBE300E6A337 /* ConsoleContent.swift */; };
+		C9BFA817229718960030591E /* GeofenceRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4EE2238BEE3006A2660 /* GeofenceRegion.swift */; };
+		C9BFA818229718960030591E /* GeofenceRegionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4EF2238BEE3006A2660 /* GeofenceRegionRequest.swift */; };
+		C9BFA819229718960030591E /* GeofencesRegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4ED2238BEE3006A2660 /* GeofencesRegionMonitor.swift */; };
+		C9BFA81A229718960030591E /* PushNotificationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B158D72269069500F44699 /* PushNotificationsFactory.swift */; };
+		C9BFA81B229718960030591E /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C983B6E722566B800097AD5B /* CouponsViewController.swift */; };
+		C9BFA81C229718960030591E /* CouponsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9565BAC225AFB79006F5F61 /* CouponsFactory.swift */; };
+		C9BFA81D229718960030591E /* Coupon.xib in Sources */ = {isa = PBXBuildFile; fileRef = C9D82313225F777B0094725B /* Coupon.xib */; };
+		C9BFA81F229718960030591E /* InteractionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4F52238C918006A2660 /* InteractionsRequest.swift */; };
+		C9BFA820229718960030591E /* InteractionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4FA2238CE3D006A2660 /* InteractionsResponse.swift */; };
+		C9BFA821229718960030591E /* InteractionServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFB4F82238CA18006A2660 /* InteractionServices.swift */; };
 		C9C803202225BBC500E6A337 /* ConsoleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8031F2225BBC500E6A337 /* ConsoleDelegate.swift */; };
 		C9C803222225BBE300E6A337 /* ConsoleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C803212225BBE300E6A337 /* ConsoleContent.swift */; };
 		C9D82314225F777B0094725B /* Coupon.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D82313225F777B0094725B /* Coupon.xib */; };
@@ -1160,6 +1172,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BFA815229718960030591E /* ConsoleDelegate.swift in Sources */,
+				C9BFA816229718960030591E /* ConsoleContent.swift in Sources */,
+				C9BFA817229718960030591E /* GeofenceRegion.swift in Sources */,
+				C9BFA818229718960030591E /* GeofenceRegionRequest.swift in Sources */,
+				C9BFA819229718960030591E /* GeofencesRegionMonitor.swift in Sources */,
+				C9BFA81A229718960030591E /* PushNotificationsFactory.swift in Sources */,
+				C9BFA81B229718960030591E /* CouponsViewController.swift in Sources */,
+				C9BFA81C229718960030591E /* CouponsFactory.swift in Sources */,
+				C9BFA81D229718960030591E /* Coupon.xib in Sources */,
+				C9BFA81F229718960030591E /* InteractionsRequest.swift in Sources */,
+				C9BFA820229718960030591E /* InteractionsResponse.swift in Sources */,
+				C9BFA821229718960030591E /* InteractionServices.swift in Sources */,
 				F8D49AC121BE24F800C0A1D1 /* InteractiveController.swift in Sources */,
 				C9397E8121AE3779006568FE /* GeofencesServices.swift in Sources */,
 				C99DADE621ADFDCD00A1752B /* GeofencesMonitor.swift in Sources */,

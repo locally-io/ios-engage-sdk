@@ -34,7 +34,7 @@ class CampaignsCoordinatorTests: XCTestCase {
 
 		coordinator = CampaignsCoordinatorMock()
 	}
-
+/*
 	func testRequestCampaignReceivedBeacons() {
 
 		let expectation = self.expectation(description: "Widget Coordinator did not get notified")
@@ -51,5 +51,5 @@ class CampaignsCoordinatorTests: XCTestCase {
 		coordinator?.didFindBeacons(beacons: [beacon1, beacon2])
 
 		waitForExpectations(timeout: 3)
-	}
+	}*/
 }

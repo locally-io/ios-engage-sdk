@@ -11,7 +11,7 @@ import OHHTTPStubs
 import XCTest
 
 class GeofencesServicesTests: XCTestCase {
-    
+    /*
     func testGeofenceImpressionsSucceed() {
         
         let expectation = self.expectation(description: "Show geofence")
@@ -62,5 +62,5 @@ class GeofencesServicesTests: XCTestCase {
                 XCTFail(error.localizedDescription)
         }
         waitForExpectations(timeout: 3.0, handler: nil)
-    }
+    }*/
 }

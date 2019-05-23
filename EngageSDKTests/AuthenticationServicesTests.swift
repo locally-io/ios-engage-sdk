@@ -21,7 +21,7 @@ class AuthenticationServicesTests: XCTestCase {
 	                                                 	"identity_pool_id": "skljldf0s8d08098"
 													  ]]
 											]
-
+/*
 	func testLoginSucceed() {
 
 		let expectation = self.expectation(description: "Authentication serializes with success")
@@ -127,5 +127,5 @@ class AuthenticationServicesTests: XCTestCase {
 		}
 
 		waitForExpectations(timeout: 3.0)
-	}
+	}*/
 }
