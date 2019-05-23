@@ -16,7 +16,6 @@ public let Engage = EngageSDK.shared
 public class EngageSDK {
 
 	static let shared = EngageSDK()
-
 	// MARK: - Public Properties
 	public var deviceToken: Data? {
 		didSet {
